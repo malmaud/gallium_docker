@@ -13,3 +13,4 @@ Pkg.checkout("ASTInterpreter")
 Pkg.checkout("VT100")
 Pkg.checkout("JuliaParser")
 Pkg.checkout("Gallium")
+using Gallium
