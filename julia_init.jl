@@ -1,16 +1,4 @@
-Pkg.add("Gallium")
-Pkg.clone("https://github.com/Keno/COFF.jl")
-Pkg.checkout("Reactive")
-Pkg.checkout("ObjFileBase")
-Pkg.checkout("StructIO")
-Pkg.checkout("AbstractTrees")
-Pkg.checkout("DWARF")
-Pkg.checkout("ELF")
-Pkg.checkout("MachO")
-Pkg.checkout("COFF")
-Pkg.checkout("TerminalUI")
-Pkg.checkout("ASTInterpreter")
-Pkg.checkout("VT100")
-Pkg.checkout("JuliaParser")
-Pkg.checkout("Gallium")
-using Gallium
+for pkg in ["Distributions", "Images", "StructOfArrays", "JLD"]
+    Pkg.add(pkg)
+    @eval using $pkg
+end
